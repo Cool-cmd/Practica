@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 int valor2 = Integer.parseInt(txtn2.getText().toString());
                 int r = valor1 + valor2;
                 txtr.setText("La suma es" + r);
+
                 btnc.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         int valor1 = Integer.parseInt(txtn1.getText().toString());
@@ -39,9 +40,19 @@ public class MainActivity extends AppCompatActivity {
 
                         txtr.setText("La multiplicacion es" + mul);
 
+                        btnc.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View v) {
+                                int valor1 = Integer.parseInt(txtn1.getText().toString());
+                                int valor2 = Integer.parseInt(txtn1.getText().toString());
 
+                                int res = (valor1 - valor2);
+
+                                txtr.setText("La resta es" + res);
+
+                            }
+
+                        });
                     }
-
                 });
             }
         });
